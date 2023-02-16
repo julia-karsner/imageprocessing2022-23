@@ -1,13 +1,45 @@
 import processing.core.PApplet;
 
-public class Main extends PApplet {
-    final int NUM_PANELS_HORIZONTAL = 4; // the horizontal quantity of panels
+import java.util.ArrayList;
+public class Main extends PApplet {//subclass definition
+    final int NUM_PANELS_HORIZONTAL = 4; // the horizontal quantity of panels;
     final int NUM_PANELS_VERTICAL = 4; // the vertical quantity of panels
-    Panel[] panels;
+    private ArrayList<Panel>panels;
+        public static PApplet app;//`if(key=='s'), panels.add(0,lastPanel);panels.add(firstPanel)
+        ;
+        //doSwap}else if(key=='r')
+        public Main(){
+        super();
+        app=this;
+    }
 
+    public void keyPressed(){
+        for(Panel t: panels) {
+            t.keyPressed(mouseX, mouseY);
+
+            if(key=='s') {
+                panels.add(0, lastPanel);//do i need panel.remove??? I AM CONFUZZZLED
+                panels.add(firstPanel);
+                doSwap;
+           }else if(key=='r'){
+
+                int randomIndex = (int)(Math.random()*list.size());
+                //Replace the element at that index with an element with a different appearance (hint: use instanceof to determine the type of the element).
+            }
+
+            }
+
+
+    public static void main(String[]args){//static method
+        PApplet.main("Main");
+    }
+    public void settings(){
+        size(600, 600);
+    }
     public void setup(){
         size(600, 600);
-        panels = new Panel[NUM_PANELS_HORIZONTAL * NUM_PANELS_VERTICAL];
+        panels = new ArrayList<Panel>();
+        //[NUM_PANELS_HORIZONTAL * NUM_PANELS_VERTICAL];
 
         int index = 0;
         for (int i = 0; i < NUM_PANELS_VERTICAL; i++){
@@ -26,8 +58,8 @@ public class Main extends PApplet {
                 } else {
                     s = new RotatingPanel( x, y, w, h);
                 }
-                s.setupImage("bunny.png");
-                panels[index] = s;
+                s.setupImage("data/Bubble-Tea-Transparent-Background.png");
+                panels.add(s);
                 index++;
             }
         }
@@ -36,16 +68,23 @@ public class Main extends PApplet {
     public void draw(){
         fancyBackground();
 
-        for (int i = 0; i < panels.length; i++){
-            Panel s = panels[i];
-            s.display();
+        for(Panel j:panels){
+            j.display(mouseX, mouseY);
+       // for (int i = 0; i < panels.size(); i++){
+         //   Panel s = panels.get(i);
+        //   s.display();
         }
     }
 
     public void mouseClicked(){
-        for (int i = 0; i < panels.length; i++){
-            Panel s = panels[i];
-            s.handleMouseClicked(mouseX, mouseY);
+      for(Panel p: panels) {
+          p.handleMouseClicked(mouseX, mouseY);
+
+      }
+
+       // for (int i = 0; i < panels.size(); i++){
+      //      Panel s = panels.get(i);
+       //     s.handleMouseClicked(mouseX, mouseY);
         }
     }
 
