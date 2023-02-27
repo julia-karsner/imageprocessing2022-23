@@ -5,12 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58db68e8-f85c-473c-87ea-ec9ae775dd83" name="Changes" comment="first commit">
-      <change afterPath="$PROJECT_DIR$/Data/Bubble-Tea-Transparent-Background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/bunny.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ContrastedPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Panel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RotatingPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TintedPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -82,7 +76,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674156983396</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="first commit">
+      <created>1676581623318</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1676581623318</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
